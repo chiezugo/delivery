@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'header.html' %}
+
+<div class="page-header title-area">
+    <div class="header-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                    <h1 class="page-title">tracking create</h1></div>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 site-breadcrumb">
+                    <nav class="breadcrumb">
+                        <a class="home" href="./"><span>Home</span></a>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span>tracking create</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Page Header end-->
+<section class="partener-1 bluebg">
+    <div class="container">
+        <div class="fh-partner clearfix">
+            <div class="list-item">
+
+
+                <div class="col-lg-12 col-md-12">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<form class="form-group" method="post" id="contactForm" name="contactForm" action="."
+      enctype="multipart/form-data">{% csrf_token %}
+    <div class="fh-form fh-form-3">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="field">
+                    <label for="email" style="color:red">Email <span>*</span></label>
+
+                    {{ form.delivery_date }}
+
+                </p>
+                <p class="field">
+                    <label for="email" style="color:red">Email <span>*</span></label>
+
+                    {{ form.destination }}
+                </p>
+                <p class="field">
+                    <label for="subject" style="color:red">subject <span>*</span></label>
+
+                    {{ form.take_off_point }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.sender_detail }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.receiver_detail }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.shipment_type }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.weight }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.content }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.quantity }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.sender_name }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.receiver_name }}
+
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="field single-field">
+                    <label for="message" style="color:red">message <span>*</span></label>
+
+                    {{ form.sender_country_flag }}
+                </p>
+                <p class="field single-field">
+                    <label for="message" style="color:red">message <span>*</span></label>
+
+                    {{ form.receiver_country_flag }}
+                </p>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p class="field submit">
+
+                    <button class="fh-btn" value="save" name="sendMessage" id="sendMessage" type="submit">create
+                        tracking details
+                    </button>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+
+
+

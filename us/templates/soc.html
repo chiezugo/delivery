@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include 'header.html' %}
+<body class="home header-transparent  header-sticky header-v1 hide-topbar-mobile"
+      style="position: relative; min-height: 100%; top: 0px;">
+<div id="page">
+
+
+    <div id="loadingPop">
+        <input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog">
+        <img src="images/ajaxloading.gif"></div>
+
+
+    <div id="fh-header-minimized" class="fh-header-minimized fh-header-v1" style="height: 111px;"></div>
+
+
+    <div class="page-header title-area">
+        <div class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                        <h1 class="page-title"> SOC Movements</h1></div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 col-xs-12 site-breadcrumb">
+                        <nav class="breadcrumb">
+                            <a class="home" href="./"><span>Home</span></a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span>  SOC Movements</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Header end-->
+    <section class="partener-1 bluebg">
+        <div class="container">
+            <div class="fh-partner clearfix">
+                <div class="list-item">
+
+
+                    <div class="col-lg-12 col-md-12">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services Welcome sec -->
+    <div class="service_dtl1 secpadd">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <div class="row paddsec">
+                        <div class="col-md-12">
+                            <div class="abotinforgt">
+                                <div class="fh-section-title clearfix f25  text-left version-dark paddbtm40">
+                                    <h2> SOC Movements </h2>
+                                </div>
+
+                                <p>
+
+                                    "Shippers owned" containers, which means that they are not owned by the actual
+                                    carrier but supplied by the cargo owners (Shippers) or OTIs.
+                                    These may not follow the ISO standard identification/certification but should be
+                                    fully CSC safety approved containers.
+                                </p>
+
+
+                                <p>
+
+                                    They may have no registered owner code and no category identifier and have no check
+                                    digit.
+                                    It is advisable to follow ISO 6346 as the absence of a compliant identification code
+                                    causes problems
+                                    for both carriers and container terminals to correctly identify the equipment and
+                                    properly deliver the cargo, because
+                                    computer systems require ISO 6346 conformant naming and as such missing prefixes are
+                                    invented.
+
+                                </p>
+
+
+                                <p>
+
+                                    Certification helps determine if they are safe to handle loading, lifting, can carry
+                                    standard weight
+                                    &amp; will not damage the goods in transit etc. Generally, damages, if any, in
+                                    transit are not under covered under carrier's
+                                    liability and shipper should insure the
+                                    equipment &amp; the goods through a cargo insurance policy/coverage.
+
+                                </p>
+
+
+                                <p>
+
+                                    We are experienced in the import releases, timely Delivery Order Notices, collection
+                                    of charges on behalf of principle, delivery of containers per client's schedule,
+                                    billing &amp; collection of detention charges, remittances timely, repositioning the
+                                    empty equipment regardless of type (Tank, Container, Flatrack, Reefer, Opentop
+                                    etc.), make available the depots to hold them and/or find outbound cargo to utilize
+                                    the empties available in stock at any port in USA. Value added services for Imports
+                                    &amp; Export cargo are also available in house.
+                                </p>
+
+
+                                <p>
+
+                                    SOC are considered as a commodity being imported in a country and might be subject
+                                    to duty/taxes. Some countries permit owner/OTI to import temporarily but to be
+                                    shipped out in a specific period before they are subject to duty/taxes and this may
+                                    require some customs formalities to be done upon entry.
+                                </p>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <hr class="margbtm30">
+
+
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Welcome sec   end-->
+
+    <!--footer sec-->
+
+    {% include 'footer.html' %}
+
+
+    <!--footer sec end-->
+
+    <!--copyright sec-->
+    <!--copyright sec end-->
+</div>
+<!--End pagewrapper-->
+
+<!--primary-mobile-nav-->
+
+
+<div id="off-canvas-layer" class="off-canvas-layer"></div>
+<!--primary-mobile-nav end-->
+
+
+<!--Scroll to top-->
+<a id="scroll-top" class="backtotop" href="#page-top"><i class="fa fa-angle-up"></i></a>
+
+<!--Color switcher-->
+
+<!-- jquery Liabrary -->
+
+
+</body>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<body class="home header-transparent  header-sticky header-v1 hide-topbar-mobile"
+      style="position: relative; min-height: 100%; top: 0px;">
+<div id="page">
+    {% include 'header.html' %}
+
+
+    <div id="fh-header-minimized" class="fh-header-minimized fh-header-v1" style="height: 111px;"></div>
+
+    <div class="page-header title-area">
+        <div class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                        <h1 class="page-title"> Contact</h1></div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 col-xs-12 site-breadcrumb">
+                        <nav class="breadcrumb">
+                            <a class="home" href="./"><span>Home</span></a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span> Contact</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Header end-->
+    <section class="partener-1 bluebg">
+        <div class="container">
+            <div class="fh-partner clearfix">
+                <div class="list-item">
+
+
+                    <div class="col-lg-12 col-md-12">
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services Welcome sec -->
+    <section class="contactpagform graybg secpadd">
+        <div class="container">
+            <div class="fh-section-title clearfix f25 text-center version-dark paddbtm40">
+                <h2>Leave Us A Message</h2>
+            </div>
+            <p class="paddbtm40 text-center">If you have any questions about the services we provide simply use the form
+                below. We try and respond to all
+                <br>queries and comments within 24 hours.</p>
+            {% include 'snippet.html' %}
+
+        </div>
+    </section>    <!--footer sec-->
+    {% include 'footer.html' %}
+
+
+    <div id="off-canvas-layer" class="off-canvas-layer"></div>
+    <!--primary-mobile-nav end-->
+
+
+    <!--Scroll to top-->
+    <a id="scroll-top" class="backtotop" href="#page-top"><i class="fa fa-angle-up"></i></a>
+
+    <!--Color switcher-->
+
+    <!-- jquery Liabrary -->
+</div>
+
+</body>
+{% endblock content %}

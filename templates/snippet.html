@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="form-group" method="post" id="contactForm" name="contactForm"
+      action="{% url 'us:contact' %}">{% csrf_token %}
+    <div class="fh-form fh-form-3">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="field">
+                    <label for="email" style="color:red">Email <span>*</span></label>
+
+                    {{ form.full_name }}
+
+                </p>
+                <p class="field">
+                    <label for="email" style="color:red">Email <span>*</span></label>
+
+                    {{ form.email }}
+                </p>
+                <p class="field">
+                    <label for="subject" style="color:red">subject <span>*</span></label>
+
+                    {{ form.subject }}
+
+                </p>
+                <p class="field">
+                    <label for="phone_number" style="color:red">phone number <span>*</span></label>
+
+                    {{ form.phone_number }}
+
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="field single-field">
+                    <label for="message" style="color:red">message <span>*</span></label>
+
+                    {{ form.message }}
+                </p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p class="field submit">
+
+                    <button class="fh-btn" name="sendMessage" id="sendMessage" type="submit">Send Message
+                    </button>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div>
+    <div>
+        <header id="masthead" class="site-header clearfix minimized" style="top: 60px;">
+
+            <div class="header-main clearfix">
+                <div class="container mobile_relative">
+                    <div class="row">
+                        <div class="site-logo col-md-3 col-sm-6 col-xs-6">
+                            <a href="./" class="logo">
+                                <img src="{% static 'images/logo.png' %}" alt="DML Courier Servce"
+                                     class="logo-light show-logo">
+                                <img src="{% static 'images/logo.png' %}" alt="DML Courier Servce"
+                                     class="logo-dark hide-logo">
+                            </a>
+                            <h1 class="site-title"><a href="./">DML Courier Servce</a></h1>
+                            <h2 class="site-description">Global Logistics Services</h2>
+                        </div>
+                        <div class="site-menu col-md-9 col-sm-6 col-xs-6">
+                            <nav id="site-navigation" class="main-nav primary-nav nav">
+                                <ul class="menu">
+                                    <li><a href="{% url 'home' %}"> Home</a></li>
+                                    <li><a href="{% url 'about' %}"> About Us</a></li>
+
+                                    <li class="has-children"><a href="javascript:void(0)" class="dropdown-toggle">
+                                        Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'us:international' %}">International Freight</a></li>
+                                            <li><a href="{% url 'us:domestic' %}">Domestic Freight</a></li>
+                                            <li><a href="{% url 'us:forwarding' %}">Freight Forwarding</a></li>
+                                            <li><a href="{% url 'us:consultation' %}">Consultation</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="has-children"><a href="javascript:void(0)"
+                                                                class="dropdown-toggle">Movers</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'us:household' %}">Household Goods</a></li>
+                                            <li><a href="{% url 'us:commercial' %}">Commercial Goods</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="has-children"><a href="javascript:void(0)"
+                                                                class="dropdown-toggle">Freight</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'us:air-freight' %}">Air Freight Carrier</a></li>
+                                            <li><a href="{% url 'us:ocean-freight' %}">Ocean Freight Forwarding</a></li>
+                                            <li><a href="{% url 'us:road-freight' %}">Road Freight Forwarding</a></li>
+                                            <li><a href="{% url 'us:soc' %}">SOC Movements</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="has-children"><a href="javascript:void(0)"
+                                                                class="dropdown-toggle">Customs</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'us:imp' %}">Export - Import</a></li>
+                                            <li><a href="{% url 'us:importers-rep' %}">Importer's Rep</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="{% url 'us:logistic' %}">Logistics</a></li>
+
+                                    <li><a href="{% url 'us:contact' %}">Contact</a></li>
+                                    <li class="extra-menu-item menu-item-button-link">
+                                        <div class="widget cargo-search-widget">
+
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+    </div>
+</div>
+
+{% endblock %}

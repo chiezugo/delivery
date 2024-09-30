@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div id="page">
+    {% include 'header.html' %}
+
+    <!-- Preloader-->
+
+    <!-- topbar -->
+
+
+    <!--Page Header-->
+    <div class="page-header title-area">
+        <div class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="page-title">Shipment Tracking</h1></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Header end-->
+    <!--contact pagesec-->
+    {% if searched %}
+    {% for tracking in tracking.all %}
+    <section class="contactpagform graybg secpadd">
+        <div class="container">
+            <div class="single_service_text_right textblack">
+                <div class="headbar">Detailed Results</div>
+                <div class="topline"></div>
+                <div id="containerx">
+                    <div id="contentarea">
+                        <div class="textline" style="float:left;width:50%">{{ tracking.tracking_number }}</div>
+                        <div class="line"></div>
+                        <div class="othline">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tbody>
+                                <tr valign="top">
+                                    <td width="34%">
+                                        <div class="dateline">Shipment Dates</div>
+                                        <div class="datelineunder"></div>
+                                        <table width="99%" border="0">
+                                            <tbody>
+                                            <tr>
+                                                <td width="38%" class="fields">Ship date:</td>
+                                                <td width="62%" class="fields">{{ tracking.ship_date }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fields">Delivery date:</td>
+                                                <td class="fields">{{ tracking.delivery_date }}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                    <td width="2%">&nbsp;</td>
+                                    <td width="33%">
+                                        <div class="dateline">Take-Off Point</div>
+                                        <div class="datelineunder"></div>
+                                        <div class="fields" style="font-size: 11px;">{{ tracking.take_off_point }}</div>
+                                    </td>
+
+                                    <td width="2%">&nbsp;</td>
+
+                                    <td width="31%">
+                                        <div class="dateline">Final Destination</div>
+                                        <div class="datelineunder"></div>
+                                        <div class="fields" style="font-size: 11px;">{{ tracking.destination }}</div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="contentarea">
+                        <div class="textline">Shipment Profile</div>
+                        <hr>
+                        <div class="othline">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tbody>
+                                <tr valign="top">
+                                    <td width="57%">
+                                        <div class="dateline">Shipper Details</div>
+                                        <div class="datelineunder"></div>
+
+                                        <div style="float:left;">
+                                        </div>
+
+
+                                        <div class="fields">{{ tracking.sender_name }}</div>
+                                        <br>
+                                        <div class="fieldx">{{ tracking.receiver_detail }}</div>
+                                        <div class="fieldx rounded">
+                                            <img src="{{tracking.sender_country_flag.url}}" style="max-width:30px">
+                                        </div>
+                                    </td>
+                                    <td width="3%">&nbsp;</td>
+                                    <td width="40%">
+                                        <div class="dateline">Receiver Details</div>
+                                        <div class="datelineunder"></div>
+                                        <div class="fields">{{ tracking.receiver_name }}</div>
+                                        <br>
+                                        <div class="fieldx">{{ tracking.receiver_detail }}</div>
+                                        <div class="fieldx">
+                                            <img src="{{tracking.receiver_country_flag.url}}" style="max-width:30px">
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div id="contentarea">
+                        <div class="textline">Shipment Content / Description</div>
+                        <hr>
+                        <div class="freightcontent">
+                            <table width="100%">
+                                <thead>
+                                <tr>
+                                    <th align="left" width="28">S/N</th>
+                                    <th align="left" width="155">Shipment Type</th>
+                                    <th align="left" width="58">Qty</th>
+                                    <th align="left" width="77">Weight</th>
+                                    <th align="left" width="333">Content</th>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>{{ tracking.shipment_type }}</td>
+                                    <td>{{ tracking.quantity }}</td>
+                                    <td>{{ tracking.weight }}</td>
+                                    <td>{{ tracking.content }}</td>
+                                </tr>
+
+                                </thead>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div id="contentarea">
+                        <div class="textline">Shipment Facts</div>
+                        <hr>
+                        <div class="freightcontent">
+                            <div class="facts" style="width: 45%; float:left">
+                                <div class="factline">Service type: &nbsp; {{ tracking.service_type }}</div>
+
+                            </div>
+                            <div class="facts" style="width: 47%; float:right">
+                                <div class="factline">Reference: &nbsp; {{ tracking.tracking_number }}</div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div id="contentarea">
+                        <div class="textline">Shipment Travel History</div>
+                        <div class="line"></div>
+                        <div class="factline" style="padding:5px 10px;"><h4>All shipment travel activity is displayed
+                            here</h4></div>
+                        <div class="table factline" style="padding:5px 10px;">
+                            <table class="listing" cellpadding="0" cellspacing="1" width="100%">
+                                <thead>
+                                <tr>
+                                    <th width="30%">Date</th>
+                                    <th width="30%">Activity</th>
+                                    <th width="40%">Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr style="background:#C2CAAA; padding:10px;">
+                                    <td style="padding:10px;">{{ tracking.ship_date }}</td>
+                                    <td style="padding:10px;">{{ tracking.destination }}</td>
+                                    <td style="padding:10px;">{{ tracking.status }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br><br><br>
+                    </div>
+
+                    <hr>
+                </div>
+                <br>
+
+            </div>
+
+
+        </div>
+        {% endfor %}
+        {% else %}
+        <hi>no result found</hi>
+        {% endif %}
+    </section>
+    <!--contact form  end -->
+    {% include 'footer.html' %}
+
+
+    <!--footer sec-->
+
+    <a id="scroll-top" class="backtotop" href="#page-top"><i class="fa fa-angle-up"></i></a>
+
+</div>
+
+
+{% endblock %}
